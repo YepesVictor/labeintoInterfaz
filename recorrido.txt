@@ -1,0 +1,8 @@
+ir norte
+ir norte
+luz
+ir norte
+atacar
+ir norte
+atacar
+ir este

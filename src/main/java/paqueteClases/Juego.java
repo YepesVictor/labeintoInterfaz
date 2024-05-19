@@ -106,27 +106,25 @@ public class Juego {
 //    public void setHabitacion(int i) {
 //        this.habitacionActual = ;
 //    }
-    /**
-     *
-     */
-//    public String juego(String comando) {
-//        comando=comando.toLowerCase();
-//       
-//            Comando c = transformar.getCommand(comando);
-//
-//            if (procesarComando(c)) {
-//
-//               if (c.getComando().equalsIgnoreCase(Palabra.IR.toString())) {
-//                    return irA();
-//                } else if (c.getComando().equalsIgnoreCase(Palabra.LUZ.toString())) {
-//                    return luz();
-//                } else if (c.getComando().equalsIgnoreCase(Palabra.ATACAR.toString())) {
-//                    return atacar();
-//                }
-//            }
-//           return "-------------------";
-//     
-//    }
+  
+    public String juego(String com) {
+        
+            System.out.println(com);
+            Comando c = transformar.getCommand(com);
+
+            if (procesarComando(c)) {
+
+                 if (c.getComando().equalsIgnoreCase(Palabra.IR.toString())) {
+                   return irA(c);
+                } else if (c.getComando().equalsIgnoreCase(Palabra.LUZ.toString())) {
+                   return luz();
+                } else if (c.getComando().equalsIgnoreCase(Palabra.ATACAR.toString())) {
+                  return  atacar();
+                }
+            }
+           return "-------------------";
+ 
+    }
     
     public String habitaciono(){
         return this.habitacionActual.getDescripcionLarga();
@@ -193,6 +191,22 @@ public class Juego {
         return this.habitacionActual.getDescripcionLarga();
     }
 
+     public String irA(Comando c) {
+        
+            String d = c.getSegundaPalabra();
+            Habitacion h = this.habitacionActual.getSalida(d);
+            if (h == null) {
+               return "No hay salida en esa direccion";
+            } else {
+                this.habitacionActual = h;
+                if (this.habitacionActual.getDescripcion().equals("Salida")
+                        || this.habitacionActual.getDescripcion().equals("Salida secreta")) {
+                    terminar = true;
+                    return "Has encontrado la salida. FELICIDADES!";
+                }
+            }
+            return this.habitacionActual.getDescripcionLarga();
+    }
     /**
      *
      * @param c

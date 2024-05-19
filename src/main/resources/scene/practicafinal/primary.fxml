@@ -39,8 +39,9 @@
          <children>
             <Button fx:id="atacar" disable="true" layoutX="449.0" layoutY="15.0" mnemonicParsing="false" onAction="#atacar" text="Atacar" />
             <Button fx:id="luz" disable="true" layoutX="527.0" layoutY="12.0" mnemonicParsing="false" onAction="#iluminar" text="Luz" />
-            <Button fx:id="iniciar" layoutX="273.0" layoutY="12.0" mnemonicParsing="false" onAction="#iniciarJuego" text="Iniciar" />
+            <Button fx:id="iniciar" layoutX="327.0" layoutY="15.0" mnemonicParsing="false" onAction="#iniciarJuego" text="Iniciar Manual" />
             <Button fx:id="volver" disable="true" layoutX="35.0" layoutY="12.0" mnemonicParsing="false" onAction="#volveraJugar" text="Volver a Jugar" />
+            <Button fx:id="iniciarAutomatico" layoutX="167.0" layoutY="15.0" mnemonicParsing="false" onAction="#iniciarJuegoAutomatico" text="Iniciar Automatico" />
          </children>
       </Pane>
    </bottom>

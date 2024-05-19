@@ -36,7 +36,7 @@ public class HabitacionOscura extends Habitacion {
     @Override
     public String getStringDeSalidas() {
         if (oscuro) {
-            return "-----------------------------\nNo puede ver las salidas porque esta oscuro. No puedes salir.";
+            return "-----------------------------\nNo puede ver las salidas porque esta oscuro. No puedes salir.\n";
         } else {
             return super.getStringDeSalidas();
 
@@ -65,7 +65,7 @@ public class HabitacionOscura extends Habitacion {
     @Override
     public String getDescripcionLarga() {
         if (oscuro) {
-            return "No puede ver las salidas porque esta oscuro";
+            return "No puede ver las salidas porque esta oscuro\n";
         } else {
             return super.getDescripcionLarga();
         }
@@ -77,9 +77,9 @@ public class HabitacionOscura extends Habitacion {
     public String iluminar(){
         if (this.oscuro) {
             this.oscuro=false;
-            return "Ahora la habitacion esta iluminada";
+            return "Ahora la habitacion esta iluminada\n";
         }else{
-            return "La habitacion ya esta iluminada";
+            return "La habitacion ya esta iluminada\n";
         }
     }
 

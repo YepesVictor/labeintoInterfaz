@@ -1,9 +1,11 @@
 package scene.practicafinal;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -73,13 +75,22 @@ public class PrimaryController {
         iniciarAutomatico.setDisable(true);
         mostrar.appendText(j.bienvenido() + "\n");
         BufferedReader br = null;
+        BufferedWriter bw=null;
         File f = new File("./recorrido.txt");
+        File sf = new File("./salidarecorrido.txt");
+        try {
+            sf.createNewFile();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
         try {
             br = new BufferedReader(new FileReader(f));
+            bw=new BufferedWriter(new FileWriter(sf));
             String aux;
             while ((aux = br.readLine()) != null) {
                 mostrar.appendText(j.juego(aux));
             }
+            bw.write(mostrar.getText());
         } catch (FileNotFoundException ex) {
             ex.printStackTrace();
         } catch (IOException ex) {
@@ -87,6 +98,7 @@ public class PrimaryController {
         } finally {
             try {
                 br.close();
+                bw.close();
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

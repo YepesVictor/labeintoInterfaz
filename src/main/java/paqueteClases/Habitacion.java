@@ -66,7 +66,7 @@ public class Habitacion {
      * @return
      */
     public String getDescripcionLarga() {
-        return "---------------------------------------------\nEstas en " + getDescripcion() + " y las " + getStringDeSalidas();
+        return "---------------------------------------------\nEstas en " + getDescripcion() + " y las " + getStringDeSalidas()+"\n";
     }
 
     /**

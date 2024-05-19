@@ -178,7 +178,7 @@ public class Juego {
         System.out.println(c);
         Habitacion h = this.habitacionActual.getSalida(c);
         if (h == null) {
-            return "No hay salida en esa direccion";
+            return "No hay salida en esa direccion\n";
         } else {
             this.habitacionActual = h;
             if (this.habitacionActual.getDescripcion().equals("Salida")
@@ -196,7 +196,7 @@ public class Juego {
             String d = c.getSegundaPalabra();
             Habitacion h = this.habitacionActual.getSalida(d);
             if (h == null) {
-               return "No hay salida en esa direccion";
+               return "No hay salida en esa direccion\n";
             } else {
                 this.habitacionActual = h;
                 if (this.habitacionActual.getDescripcion().equals("Salida")
@@ -207,31 +207,7 @@ public class Juego {
             }
             return this.habitacionActual.getDescripcionLarga();
     }
-    /**
-     *
-     * @param c
-     */
-//    public void fin(Comando c) {
-//        int i = 0;
-//        do {
-//            
-//            System.out.println("-----------------------------------\n+
-//                               "1 Si quiere salir del juego"
-//                               2 
-//                               3 Seguir en esta partida""");
-//            String aux = s.nextLine();
-//            if (aux.equals("2")) {
-//                System.out.println("Gracias por Jugar");
-//                System.exit(0);
-//            } else if (aux.equals("1")) {
-//                main.Run.menu();
-//            } else if (aux.equals("3")) {
-//                i = 1;
-//            } else {
-//                System.out.println("Ingrese una opcion valida");
-//            }
-//        } while (i == 0);
-//    }
+
     public static String ayuda() {
         return PalabraComando.comandoDisponible() + "\n-----------------------------";
     }
@@ -241,7 +217,7 @@ public class Juego {
             HabitacionOscura h = (HabitacionOscura) this.habitacionActual;
            return h.iluminar()+"\n"+this.habitacionActual.getDescripcionLarga();
         } else {
-            return "La habitacion ya esta iluminada ";
+            return "La habitacion ya esta iluminada\n";
         }
     }
 
@@ -250,7 +226,7 @@ public class Juego {
             HabitacionMonstruo h = (HabitacionMonstruo) this.habitacionActual;
            return h.ataqueMonstruo()+"\n"+this.habitacionActual.getDescripcionLarga();
         } else {
-            return "No hay mostruos en esta habitacion";
+            return "No hay mostruos en esta habitacion\n";
         }
     }
 }

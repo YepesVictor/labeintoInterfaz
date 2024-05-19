@@ -67,11 +67,10 @@ public class PalabraComando {
      * @return
      */
     public static String mostrarComandos() {
-        return "\n" + Palabra.AYUDA + ":Permite ver los comandos\n" + 
+        return "\n" +
                 Palabra.IR + "("+Salida.NORTE+" - "+Salida.SUR+" - "+Salida.ESTE+" - "+Salida.OESTE+"):Para indicar a donde moverse\n" + 
                 Palabra.LUZ + ":Iluminar una habitacion oscura\n" + 
-                Palabra.ATACAR + ":Ataca al monstruo de la habitacion\n" + 
-                Palabra.SALIR + ":Finalizar partida";
+                Palabra.ATACAR + ":Ataca al monstruo de la habitacion\n" ;
     }
 
 }

@@ -32,13 +32,13 @@ public class HabitacionMonstruo extends Habitacion {
         if (vivo) {
            if (tipo.equals("jefe")) {
                 vivo = false;
-                return "Mataste al monstruo jefe";
+                return "Mataste al monstruo jefe\n";
             }else{
                vivo= false;
-               return "Mataste a un monstruo";
+               return "Mataste a un monstruo\n";
            }
         }
-        return "No hay monstruo vivo";
+        return "No hay monstruo vivo\n";
     }
 
     /**
@@ -48,7 +48,7 @@ public class HabitacionMonstruo extends Habitacion {
     @Override
     public String getDescripcionLarga() {
         if (vivo) {
-            return "Habitacion con un monstruo. Para salir debes matar al monstruo";
+            return "Habitacion con un monstruo. Para salir debes matar al monstruo\n";
         } else {
             return "Monstruo derrotado\n"+super.getDescripcionLarga()  ;
         }
@@ -61,7 +61,7 @@ public class HabitacionMonstruo extends Habitacion {
     @Override
     public String getStringDeSalidas() {
         if (vivo) {
-            return "No puedes salir hasta que el monstruo sea derrotado";
+            return "No puedes salir hasta que el monstruo sea derrotado\n";
         } else {
             return super.getStringDeSalidas();
         }

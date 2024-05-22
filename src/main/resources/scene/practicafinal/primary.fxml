@@ -6,42 +6,39 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane prefHeight="440.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scene.practicafinal.PrimaryController">
+<BorderPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scene.practicafinal.PrimaryController">
    <center>
       <Pane focusTraversable="true" prefHeight="166.0" prefWidth="394.0">
          <children>
-            <TextArea fx:id="mostrar" depthTest="DISABLE" editable="false" prefHeight="367.0" prefWidth="432.0" />
+            <TextArea fx:id="mostrar" depthTest="DISABLE" editable="false" prefHeight="377.0" prefWidth="464.0" />
          </children>
       </Pane>
    </center>
    <top>
-      <Label text="Laberinto" BorderPane.alignment="CENTER" />
+      <Label alignment="CENTER" minHeight="50.0" prefHeight="50.0" prefWidth="93.0" text="Laberinto" BorderPane.alignment="CENTER" />
    </top>
    <left>
-      <Pane prefHeight="191.0" prefWidth="74.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="salir" layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
-         </children>
-      </Pane>
+      <Pane prefHeight="58.0" prefWidth="88.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
       <Pane prefHeight="58.0" prefWidth="88.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="sur" disable="true" layoutX="17.0" layoutY="59.0" mnemonicParsing="false" onAction="#irSur" text="Sur" />
-            <Button fx:id="este" disable="true" layoutX="16.0" layoutY="104.0" mnemonicParsing="false" onAction="#irEste" text="Este" />
-            <Button fx:id="oeste" disable="true" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#irOeste" text="Oeste" />
-            <Button fx:id="norte" disable="true" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#irNorte" text="Norte" />
+            <Button fx:id="sur" disable="true" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#irSur" prefHeight="25.0" prefWidth="50.0" text="Sur" />
+            <Button fx:id="este" disable="true" layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#irEste" prefHeight="25.0" prefWidth="50.0" text="Este" />
+            <Button fx:id="oeste" disable="true" layoutX="14.0" layoutY="158.0" mnemonicParsing="false" onAction="#irOeste" prefHeight="25.0" prefWidth="50.0" text="Oeste" />
+            <Button fx:id="norte" disable="true" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#irNorte" prefHeight="25.0" prefWidth="50.0" text="Norte" />
+            <Button fx:id="atacar" disable="true" layoutX="14.0" layoutY="206.0" mnemonicParsing="false" onAction="#atacar" prefHeight="25.0" prefWidth="50.0" text="Atacar" />
+            <Button fx:id="luz" disable="true" layoutX="14.0" layoutY="254.0" mnemonicParsing="false" onAction="#iluminar" prefHeight="25.0" prefWidth="50.0" text="Luz" />
          </children>
       </Pane>
    </right>
    <bottom>
       <Pane prefHeight="54.0" prefWidth="594.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="atacar" disable="true" layoutX="449.0" layoutY="15.0" mnemonicParsing="false" onAction="#atacar" text="Atacar" />
-            <Button fx:id="luz" disable="true" layoutX="527.0" layoutY="12.0" mnemonicParsing="false" onAction="#iluminar" text="Luz" />
             <Button fx:id="iniciar" layoutX="327.0" layoutY="15.0" mnemonicParsing="false" onAction="#iniciarJuego" text="Iniciar Manual" />
-            <Button fx:id="volver" disable="true" layoutX="35.0" layoutY="12.0" mnemonicParsing="false" onAction="#volveraJugar" text="Volver a Jugar" />
+            <Button fx:id="volver" disable="true" layoutX="40.0" layoutY="15.0" mnemonicParsing="false" onAction="#volveraJugar" text="Volver a Jugar" />
             <Button fx:id="iniciarAutomatico" layoutX="167.0" layoutY="15.0" mnemonicParsing="false" onAction="#iniciarJuegoAutomatico" text="Iniciar Automatico" />
+            <Button fx:id="salir" layoutX="507.0" layoutY="14.0" mnemonicParsing="false" onAction="#salir" prefHeight="20.0" prefWidth="50.0" text="Salir" />
          </children>
       </Pane>
    </bottom>

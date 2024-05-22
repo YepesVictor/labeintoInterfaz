@@ -18,14 +18,12 @@ Norte Sur Este Oeste
 Habitacion con un monstruo. Para salir debes matar al monstruo
 Mataste a un monstruo
 
-Monstruo derrotado
 ---------------------------------------------
 Estas en Piso 7- Coliseo y las salidas disponibles son:
 Norte Sur Este Oeste 
 Habitacion con un monstruo. Para salir debes matar al monstruo
 Mataste al monstruo jefe
 
-Monstruo derrotado
 ---------------------------------------------
 Estas en Piso 10- Juicio y las salidas disponibles son:
 Sur Este Oeste 

@@ -43,14 +43,14 @@ public class HabitacionMonstruo extends Habitacion {
 
     /**
      *
-     * @return
+     * @return6
      */
     @Override
     public String getDescripcionLarga() {
         if (vivo) {
             return "Habitacion con un monstruo. Para salir debes matar al monstruo\n";
         } else {
-            return "Monstruo derrotado\n"+super.getDescripcionLarga()  ;
+            return super.getDescripcionLarga()  ;
         }
     }
 

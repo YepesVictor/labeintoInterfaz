@@ -208,10 +208,6 @@ public class Juego {
             return this.habitacionActual.getDescripcionLarga();
     }
 
-    public static String ayuda() {
-        return PalabraComando.comandoDisponible() + "\n-----------------------------";
-    }
-
     public String luz() {
         if (this.habitacionActual instanceof HabitacionOscura) {
             HabitacionOscura h = (HabitacionOscura) this.habitacionActual;

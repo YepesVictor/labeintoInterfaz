@@ -11,14 +11,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
 import paqueteClases.Juego;
 
 public class PrimaryController {
-    
-       @FXML
-    private BorderPane fondo;
 
+    @FXML
+    private AnchorPane fondo;
     @FXML
     private Button atacar;
     @FXML
@@ -77,12 +76,17 @@ public class PrimaryController {
         iniciar.setDisable(true);
         iniciarAutomatico.setDisable(true);
         mostrar.appendText(j.bienvenido() + "\n");
-        
+
         BufferedReader br = null;
         BufferedWriter bw = null;
-        File f = new File("./recorrido.txt");
-        File sf = new File("./salidarecorrido.txt");
+        File f = new File("./ficheros/recorrido.txt");
+        File fr=new File("./ficheros");
+        File sf = new File("./ficheros/salidarecorrido.txt");
         
+        if (!f.exists()) {
+            fr.mkdir();
+        }
+
         try {
             sf.createNewFile();
         } catch (IOException ex) {
@@ -117,7 +121,7 @@ public class PrimaryController {
     @FXML
     void irEste(ActionEvent event
     ) {
-        mostrar.appendText(j.irA(este.getText()) );
+        mostrar.appendText(j.irA(este.getText()));
         if (j.isTerminar()) {
             sal();
         }
@@ -144,7 +148,7 @@ public class PrimaryController {
     @FXML
     void irSur(ActionEvent event
     ) {
-        mostrar.appendText(j.irA(sur.getText()) );
+        mostrar.appendText(j.irA(sur.getText()));
         if (j.isTerminar()) {
             sal();
         }
@@ -186,5 +190,5 @@ public class PrimaryController {
         luz.setDisable(true);
         volver.setDisable(false);
         j = null;
-    }
+    }    
 }

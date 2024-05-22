@@ -1,6 +1,11 @@
 ir norte
-ir norte
+ir este
+ir este
 luz
+ir norte
+ir este
+ir norte
+ir oeste
 ir norte
 atacar
 ir norte

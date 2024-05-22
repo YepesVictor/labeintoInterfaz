@@ -9,12 +9,27 @@ ATACAR:Ataca al monstruo de la habitacion
 ---------------------------------------------
 Estas en Piso 1- Desierto y las salidas disponibles son:
 Norte Este Oeste 
+---------------------------------------------
+Estas en Piso 4- Pueblo y las salidas disponibles son:
+Norte Este Oeste 
 No puede ver las salidas porque esta oscuro
 Ahora la habitacion esta iluminada
 
 ---------------------------------------------
-Estas en Piso 3- Cueva y las salidas disponibles son:
+Estas en Piso 5- Amanecer y las salidas disponibles son:
+Norte Oeste 
+---------------------------------------------
+Estas en Piso 6- Oceano y las salidas disponibles son:
 Norte Sur Este Oeste 
+---------------------------------------------
+Estas en Piso 0 - Principal y las salidas disponibles son:
+Norte 
+---------------------------------------------
+Estas en Piso 1- Desierto y las salidas disponibles son:
+Norte Este Oeste 
+---------------------------------------------
+Estas en Piso 2- Jungla y las salidas disponibles son:
+Norte Este 
 Habitacion con un monstruo. Para salir debes matar al monstruo
 Mataste a un monstruo
 

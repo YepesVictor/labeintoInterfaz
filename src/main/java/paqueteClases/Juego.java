@@ -4,8 +4,6 @@
  */
 package paqueteClases;
 
-import java.time.temporal.TemporalAdjusters;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -15,7 +13,7 @@ import java.util.Scanner;
 public class Juego {
 
     private Habitacion habitacionActual;
-    private Transformar transformar;
+    private final Transformar transformar;
     private boolean terminar = false;
 
     /**
